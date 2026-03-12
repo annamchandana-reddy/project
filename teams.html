@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IPL Teams</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f4f4;
+}
+
+h1{
+text-align:center;
+color:#0b3d91;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+}
+
+td{
+border:2px solid #555;
+padding:15px;
+text-align:center;
+background:white;
+}
+
+img{
+width:90px;
+height:90px;
+}
+
+p{
+cursor:pointer;
+font-weight:bold;
+color:#0b3d91;
+}
+
+p:hover{
+color:red;
+}
+
+.info-box{
+border:3px solid #0b3d91;
+padding:20px;
+width:320px;
+height:260px;
+background:#e8f0ff;
+}
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9d71c; }
+
+</style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="winners.html">Winners</a></li>
+        </ul>
+    </nav>
+
+<h1>IPL Teams</h1>
+
+<table>
+
+<tr>
+<td>
+<img src="rcb.png">
+<p onclick="showTeam('rcb')">Royal Challengers Bangalore</p>
+</td>
+
+<td>
+<img src="mi.png">
+<p onclick="showTeam('mi')">Mumbai Indians</p>
+</td>
+
+<td rowspan="5">
+<div id="team-info" class="info-box">
+<h2>Click a Team</h2>
+<p>Team details will appear here</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+ <img src="csk.png">
+<p onclick="showTeam('csk')">Chennai Super Kings</p>
+</td>
+
+<td>
+<img src="kkr.png">
+<p onclick="showTeam('kkr')">Kolkata Knight Riders</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="dc.png">
+<p onclick="showTeam('dc')">Delhi Capitals</p>
+</td>
+
+<td>
+<img src="srh.png">
+<p onclick="showTeam('srh')">Sunrisers Hyderabad</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="rr.png">
+<p onclick="showTeam('rr')">Rajasthan Royals</p>
+</td>
+
+<td>
+<img src="pbks.png">
+<p onclick="showTeam('pbks')">Punjab Kings</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="lsg.png">
+<p onclick="showTeam('lsg')">Lucknow Super Giants</p>
+</td>
+
+<td>
+<img src="gt.png">
+<p onclick="showTeam('gt')">Gujarat Titans</p>
+</td>
+</tr>
+
+</table>
+
+<script>
+
+function showTeam(team){
+
+let info=document.getElementById("team-info");
+
+if(team=="csk"){
+info.innerHTML="<h2>Chennai Super Kings</h2><p>Founded: 2008<br>Captain: MS Dhoni<br>Titles: 5<br>Home Ground: Chepauk Stadium</p>";
+}
+
+else if(team=="mi"){
+info.innerHTML="<h2>Mumbai Indians</h2><p>Founded: 2008<br>Captain: Hardik Pandya<br>Titles: 5<br>Home Ground: Wankhede Stadium</p>";
+}
+
+else if(team=="rcb"){
+info.innerHTML="<h2>Royal Challengers Bangalore</h2><p>Founded: 2008<br>Captain: Rajat Patidar<br>Titles: 1<br>Home Ground: Chinnaswamy Stadium</p>";
+}
+
+else if(team=="kkr"){
+info.innerHTML="<h2>Kolkata Knight Riders</h2><p>Founded: 2008<br>Captain: Ajinkya Rahane<br>Titles: 2<br>Home Ground: Eden Gardens</p>";
+}
+
+else if(team=="dc"){
+info.innerHTML="<h2>Delhi Capitals</h2><p>Founded: 2008<br>Captain: Axar Patel<br>Titles: 0<br>Home Ground: Arun Jaitley Stadium</p>";
+}
+
+else if(team=="srh"){
+info.innerHTML="<h2>Sunrisers Hyderabad</h2><p>Founded: 2013<br>Captain: Pat Cummins<br>Titles: 1<br>Home Ground: Rajiv Gandhi Stadium</p>";
+}
+
+else if(team=="rr"){
+info.innerHTML="<h2>Rajasthan Royals</h2><p>Founded: 2008<br>Captain: Sanju Samson<br>Titles: 1<br>Home Ground: Sawai Mansingh Stadium</p>";
+}
+
+else if(team=="pbks"){
+info.innerHTML="<h2>Punjab Kings</h2><p>Founded: 2008<br>Captain: Shreyas Iyer<br>Titles: 0<br>Home Ground: PCA Stadium</p>";
+}
+
+else if(team=="lsg"){
+info.innerHTML="<h2>Lucknow Super Giants</h2><p>Founded: 2022<br>Captain: KL Rahul<br>Titles: 0<br>Home Ground: Ekana Stadium</p>";
+}
+
+else if(team=="gt"){
+info.innerHTML="<h2>Gujarat Titans</h2><p>Founded: 2022<br>Captain: Shubman Gill<br>Titles: 1<br>Home Ground: Narendra Modi Stadium</p>";
+}
+
+}
+
+</script>
+
+</body>
+</html>
+
+  
